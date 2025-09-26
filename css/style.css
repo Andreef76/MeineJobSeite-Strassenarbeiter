@@ -1,74 +1,106 @@
-/* Общие стили для всего сайта */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
-
-/* Шапка и навигация */
-header {
-    background-color: #005f73;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    margin: 20px;
+    line-height: 1.6;
 }
 
 header h1 {
-    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
     margin: 0 10px;
-    font-weight: bold;
+    text-decoration: none;
+    color: #2c3e50;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
 }
 
-nav a:hover {
-    text-decoration: underline;
+header h1 {
+    text-align: center;
 }
 
-/* Основной контент */
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #2c3e50;
+}
+
 section {
     max-width: 900px;
-    margin: 20px auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
+    margin: auto;
 }
 
-/* Изображения превью */
-section img {
+.grid-container {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    height: 80vh;
+}
+
+.upper-half {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 40px; /* превью опущено ниже */
+}
+
+.preview-container img {
+    width: 130px;
+    cursor: pointer;
+}
+
+.download-btn {
     display: block;
-    margin: 10px 0;
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-}
-
-/* Ссылки на скачивание */
-section a {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 8px 12px;
-    background-color: #0a9396;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #2980b9;
     color: white;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    width: 130px;
+    text-align: center;
+    font-size: 14px;
 }
 
-section a:hover {
-    background-color: #94d2bd;
+.text-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* прижать текст к нижнему краю блока */
+    text-align: left;          /* выравнивание по левому краю */
+    padding-left: 25px;        /* отступ от превью */
+    margin-bottom: 0;
 }
 
-/* Футер */
+.text-bottom {
+    text-align: justify;
+    margin-left: 130px;
+    margin-right: 40px;
+    margin-top: -10px;
+}
+
 footer {
     text-align: center;
-    padding: 15px;
-    background-color: #005f73;
-    color: white;
-    margin-top: 20px;
+    margin-top: 30px;
 }
